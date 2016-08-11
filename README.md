@@ -13,4 +13,4 @@ So, if rock shot scissors rock wins.
 ```
 ### TODO
 
-+ Fix all import errors
++ ~~Fix all import errors~~

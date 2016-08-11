@@ -1,7 +1,7 @@
 local Bullet = Object:extend()
 
 function Bullet:new(x1,y1,x2,y2)
-	self.sprite = assets['bullet'].state['happy']
+	self.sprite = assets['bullet'].states['happy']
 	self.AABB = {
 		x = 0, y = 0,
 		w = self.sprite.w, h = self.sprite.h
