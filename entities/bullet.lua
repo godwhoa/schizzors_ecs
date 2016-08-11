@@ -1,7 +1,6 @@
 local Bullet = Object:extend()
 
 function Bullet:new(x1,y1,x2,y2)
-	self.img = love.graphics.newImage('assets/')
 	self.sprite = assets['bullet'].state['happy']
 	self.AABB = {
 		x = 0, y = 0,

@@ -5,7 +5,7 @@ function Character:new()
 	self.emotion = 'happy'
 	self.sprite = assets[self.form].states[self.emotion]
 	self.AABB = {
-		x = math.random(ww), y = math.random(wh)
+		x = math.random(ww), y = math.random(wh),
 		w = self.sprite.w, h = self.sprite.h
 	}
 	self.velocity = {

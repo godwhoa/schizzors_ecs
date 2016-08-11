@@ -1,6 +1,9 @@
+inspect = require "inspect"
 Object = require "libs.classic"
 assets = require "asset"
+print(inspect(asset))
 tiny = require "libs.tiny"
+Character = require 'entities.character'
 --systems
 control_sys = require 'systems.control'
 friction_sys = require 'systems.friction'

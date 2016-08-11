@@ -1,4 +1,3 @@
-local Character = require 'character'
 local Player = Character:extend()
 
 function Player:new()

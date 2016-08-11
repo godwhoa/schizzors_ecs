@@ -14,6 +14,9 @@ function ProjectileSystem:process(e, dt)
 	if e.AABB.y+e.AABB.h < 0 or e.AABB.y+e.AABB.h > wh then
 		tiny.remove(world, e)
 	end
+
+	-- draw
+	love.graphics.draw(e.sprite.img, e.sprite.states["happy"], e.AABB.x, e.AABB.y)
 end
 
 return ProjectileSystem
