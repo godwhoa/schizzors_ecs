@@ -1,0 +1,24 @@
+Components:
+	AABB
+	velocity
+	sprite
+	isPlayer
+	isAI
+
+Entities:
+	Bullet:
+		AABB, velocity, sprite, isProjectile
+	Player:
+		AABB, velocity, sprite, isPlayer
+	AI:
+	  AABB, velocity, sprite, isAI
+
+Systems:
+	Control:
+		AABB, velocity, isplayer
+	Velocity:
+		AABB, velocity
+	Friction:
+		velocity
+	Sprite:
+		isPlayer | isAI
