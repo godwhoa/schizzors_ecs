@@ -19,16 +19,18 @@ end
 
 function Character:form_up()
 	self.scroll_count = math.loop(self.scroll_count + 1,1,#self.forms)
-	self.form = self.forms[self.scroll_count]
+	self:set_form(self.forms[self.scroll_count])
 end
 
 function Character:form_down()
 	self.scroll_count = math.loop(self.scroll_count - 1,1,#self.forms)
-	self.form = self.forms[self.scroll_count]
+	self:set_form(self.forms[self.scroll_count])
 end
 
-function Character:form_rand()
-	self.form = self.forms[math.random(#self.forms)]
+function Character:set_form(form)
+	self.form = form
+	self.sprite = assets[self.form]
+	self.AABB.w,self.AABB.h = self.sprite.w, self.sprite.h
 end
 
 return Character

@@ -21,7 +21,7 @@ love.window.setTitle("Schizzors")
 
 function love.load()
 	ai, player = ai_ent(),player_ent()
-	world = tiny.world(velocity_sys,control_sys,friction_sys,sprite_sys,proj_sys,
+	world = tiny.world(proj_sys,velocity_sys,control_sys,friction_sys,sprite_sys,
 					ai, player)
 end
 
