@@ -13,6 +13,22 @@ function Character:new()
 	}
 	self.friction = 0.98
 	self.displace = 0.1
+	self.scroll_count = 1
+	self.forms = {'rock','paper','scissors'}
+end
+
+function Character:form_up()
+	self.scroll_count = math.loop(self.scroll_count + 1,1,#self.forms)
+	self.form = self.forms[self.scroll_count]
+end
+
+function Character:form_down()
+	self.scroll_count = math.loop(self.scroll_count - 1,1,#self.forms)
+	self.form = self.forms[self.scroll_count]
+end
+
+function Character:form_rand()
+	self.form = self.forms[math.random(#self.forms)]
 end
 
 return Character

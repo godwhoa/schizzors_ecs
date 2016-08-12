@@ -1,16 +1,16 @@
 local Bullet = Object:extend()
 
 function Bullet:new(x1,y1,x2,y2)
-	self.sprite = assets['bullet'].states['happy']
+	self.sprite = assets['bullet']
 	self.AABB = {
-		x = 0, y = 0,
+		x = x1, y = y1,
 		w = self.sprite.w, h = self.sprite.h
 	}
 	self.velocity = {
-		x = math.random(ww), y = math.random(wh)
+		x = 0, y = 0,
 	}
 	self.angle = math.atan2(y2-y1, x2-x1)
-	self.speed = 250
+	self.speed = 500
 	self.isProjectile = true
 end
 

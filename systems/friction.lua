@@ -1,6 +1,6 @@
 local FrictionSystem = tiny.processingSystem()
 
-FrictionSystem.filter = tiny.requireAll("velocity")
+FrictionSystem.filter = tiny.requireAll("velocity","friction")
 
 function FrictionSystem:process(e, dt)
 	e.velocity.x = e.velocity.x * e.friction
