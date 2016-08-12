@@ -18,4 +18,6 @@ add_asset('rock','assets/rock.png',72, 54,2)
 add_asset('paper','assets/paper.png',49,64,2)
 add_asset('scissors','assets/scissors.png',47,80,1)
 add_asset('bullet','assets/bullet.png',4,4,1)
+add_asset('crosshair','assets/crosshair.png',28,28,1)
+
 return assets

@@ -11,6 +11,7 @@ friction_sys = require 'systems.friction'
 sprite_sys = require 'systems.sprite'
 proj_sys = require 'systems.projectile'
 --entities
+crosshair_ent = require 'entities.crosshair'
 bullet_ent = require 'entities.bullet'
 ai_ent = require 'entities.ai'
 player_ent = require 'entities.player'
@@ -20,9 +21,9 @@ love.window.setMode(ww,wh,{msaa=5})
 love.window.setTitle("Schizzors")
 
 function love.load()
-	ai, player = ai_ent(),player_ent()
+	ai, player,crosshair = ai_ent(),player_ent(),crosshair_ent()
 	world = tiny.world(proj_sys,velocity_sys,control_sys,friction_sys,sprite_sys,
-					ai, player)
+					ai, player,crosshair)
 end
 
 function love.wheelmoved(x, y)
@@ -30,6 +31,10 @@ function love.wheelmoved(x, y)
 end
 
 function love.keypressed(key)
+end
+
+function love.mousemoved(x,y)
+	crosshair:mousemoved(x,y)
 end
 
 function love.mousepressed(x, y, button)
